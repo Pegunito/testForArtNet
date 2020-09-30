@@ -1,0 +1,19 @@
+.goods__list {
+    padding: 5% 5%;
+    display: flex;
+}
+
+.goods__item {
+    padding-right: 5%;
+}
+
+.goods__avatar {
+    margin-bottom: 10%;
+    width: 300px;
+    height: 200px;
+}
+
+.goods__info {
+    display: flex;
+    justify-content: space-between;
+}
