@@ -1,6 +1,25 @@
+html {
+    font-size: $baseFontSize;
+  
+    @include tablets {
+      font-size: $baseFontSize - 1px;
+    }
+  
+    @include phones {
+      font-size: $baseFontSize - 3px;
+    }
+}
+
 body, html {
     height: 100%;
 }
+
+body {
+    font-family: 'Piazzolla', serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    position: relative;
+  }
 
 a {
     color: inherit;
@@ -38,5 +57,6 @@ img {
 .container {
     position: relative;
     width: 95%;
+    max-width: $containerWidth;
     margin: 0 auto;
 }

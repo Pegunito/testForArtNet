@@ -1,5 +1,26 @@
+html {
+  font-size: 18px;
+}
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 17px;
+  }
+}
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 15px;
+  }
+}
+
 body, html {
   height: 100%;
+}
+
+body {
+  font-family: "Piazzolla", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
 }
 
 a {
@@ -38,6 +59,7 @@ img {
 .container {
   position: relative;
   width: 95%;
+  max-width: 940px;
   margin: 0 auto;
 }
 
@@ -52,8 +74,8 @@ img {
 
 .goods__avatar {
   margin-bottom: 10%;
-  width: 300px;
-  height: 200px;
+  width: 16.6666666667rem;
+  height: 11.1111111111rem;
 }
 
 .goods__info {
