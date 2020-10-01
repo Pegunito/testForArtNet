@@ -1,19 +1,33 @@
 .goods__list {
-    padding: 5% 5%;
+    flex-wrap: wrap;
     display: flex;
+    justify-content: center;
 }
 
 .goods__item {
-    padding-right: 5%;
+    padding: 5% 3%;
 }
 
 .goods__avatar {
     margin-bottom: 10%;
-    width: rem(300px);
-    height: rem(200px);
+    width: rem(250px);
+    height: rem(180px);
 }
 
 .goods__info {
     display: flex;
-    justify-content: space-between;
+}
+
+.goods__title {
+    position: relative;
+}
+
+.goods__content {
+    position: absolute;
+    height: 0px;
+    overflow: hidden;
+
+    @include tablets {
+
+    }
 }

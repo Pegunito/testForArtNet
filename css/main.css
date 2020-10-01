@@ -59,26 +59,36 @@ img {
 .container {
   position: relative;
   width: 95%;
-  max-width: 940px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .goods__list {
-  padding: 5% 5%;
+  flex-wrap: wrap;
   display: flex;
+  justify-content: center;
 }
 
 .goods__item {
-  padding-right: 5%;
+  padding: 5% 3%;
 }
 
 .goods__avatar {
   margin-bottom: 10%;
-  width: 16.6666666667rem;
-  height: 11.1111111111rem;
+  width: 13.8888888889rem;
+  height: 10rem;
 }
 
 .goods__info {
   display: flex;
-  justify-content: space-between;
+}
+
+.goods__title {
+  position: relative;
+}
+
+.goods__content {
+  position: absolute;
+  height: 0px;
+  overflow: hidden;
 }
