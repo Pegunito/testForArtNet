@@ -1,3 +1,9 @@
+$(".goods__avatar").brazzersCarousel();
+
+$(".goods__link").click(e => {
+    event.preventDefault();
+});
+
 // Показ инфы при ховер
 
 const openItem = item => {
