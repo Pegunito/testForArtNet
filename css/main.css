@@ -63,6 +63,14 @@ img {
   margin: 0 auto;
 }
 
+.goods {
+  text-align: center;
+}
+
+.goods__preview {
+  font-weight: bold;
+}
+
 .goods__list {
   flex-wrap: wrap;
   display: flex;
@@ -91,4 +99,18 @@ img {
   position: absolute;
   height: 0px;
   overflow: hidden;
+  text-align: start;
+}
+
+.goods__like {
+  color: white;
+  text-decoration: none;
+  padding: 0.8em 1em calc(.8em + 3px);
+  border-radius: 3px;
+  background: #a750c7;
+  box-shadow: 0 -3px #da73e6 inset;
+  transition: 0.2s;
+}
+.goods__like:hover {
+  background: #d457cc;
 }

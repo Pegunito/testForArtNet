@@ -1,4 +1,6 @@
-$(".goods__avatar").brazzersCarousel();
+$(".goods__avatar").brazzersCarousel(e => {
+    
+});
 
 $(".goods__link").click(e => {
     event.preventDefault();
@@ -37,3 +39,7 @@ $('.goods__link').hover(e => {
         openItem($this);
     }
 });
+
+//возврат к первому слайду
+
+

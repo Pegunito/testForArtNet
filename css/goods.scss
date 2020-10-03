@@ -1,3 +1,11 @@
+.goods {
+    text-align: center;
+}
+
+.goods__preview {
+    font-weight: bold;
+}
+
 .goods__list {
     flex-wrap: wrap;
     display: flex;
@@ -26,8 +34,19 @@
     position: absolute;
     height: 0px;
     overflow: hidden;
+    text-align: start;
+}
 
-    @include tablets {
+.goods__like {
+    color: white;
+    text-decoration: none;
+    padding: .8em 1em calc(.8em + 3px);
+    border-radius: 3px;
+    background: rgb(167, 80, 199);
+    box-shadow: 0 -3px rgb(218, 115, 230) inset;
+    transition: 0.2s;
 
+    &:hover {
+        background: rgb(212, 87, 204);
     }
 }
