@@ -60,4 +60,33 @@ $("[data-goods-id]").click(e => {
     })
 });
 
+//slider 
+
+const left = document.querySelector("#left");
+const right = document.querySelector("#right");
+const itemsList = document.querySelector("#items");
+const computedStyles = window.getComputedStyle(itemsList);
+const items = document.querySelectorAll(".modal__slider-img");
+
+const minRight = 0;
+const step = 160;
+const preShownItems = 470 / step;
+const maxRight = (items.length - preShownItems) * step;
+let currentRight = 0;
+
+itemsList.style.right = currentRight;
+
+right.addEventListener("click", e => {
+    if (currentRight < maxRight) {
+        currentRight += step;
+        itemsList.style.right = `${currentRight}px`;
+    }
+});
+
+left.addEventListener("click", e => {
+    if (currentRight > minRight) {
+        currentRight -= step;
+        itemsList.style.right = `${currentRight}px`;
+    }
+});
 

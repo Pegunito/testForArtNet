@@ -116,7 +116,10 @@ img {
 }
 
 .modal__window {
+  background: #61c4d9;
   display: none;
+  border-radius: 20px;
+  z-index: 1000;
 }
 
 .modal__container {
@@ -127,7 +130,6 @@ img {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  background-color: rgba(225, 232, 232, 0.3);
 }
 
 .modal__main-info {
@@ -137,6 +139,19 @@ img {
 .modal__goods-name {
   display: flex;
   flex-direction: column;
+  padding-right: 5%;
+}
+
+.modal__slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .modal__slider {
+    display: none;
+  }
 }
 
 .modal__slider-img {
@@ -144,9 +159,45 @@ img {
   height: 4.4444444444rem;
 }
 
+.modal__arrow {
+  position: absolute;
+  cursor: pointer;
+  font-size: 2.7777777778rem;
+}
+.modal__arrow--left {
+  right: 92%;
+}
+.modal__arrow--right {
+  left: 92%;
+}
+
+.modal__wrapper {
+  position: relative;
+  display: flex;
+  width: 26.1111111111rem;
+  overflow: hidden;
+}
+
+.modal__items {
+  display: flex;
+  position: relative;
+  right: 0;
+  transition: right 0.3s;
+}
+
 .modal__img {
   width: 13.8888888889rem;
   height: 10rem;
+  margin-bottom: 2%;
+}
+@media screen and (max-width: 768px) {
+  .modal__img {
+    display: none;
+  }
+}
+
+.modal__slider-img {
+  margin-right: 2%;
 }
 
 .form {

@@ -1,5 +1,8 @@
 .modal__window {
+    background: #61c4d9;
     display: none;
+    border-radius: 20px;
+    z-index: 1000;
 }
 
 .modal__container {
@@ -10,7 +13,7 @@
     margin: 0 auto;
     display: flex;
     flex-direction: column;
-    background-color: rgba(225, 232, 232, .3);
+    
 }
 
 .modal__main-info {
@@ -20,6 +23,18 @@
 .modal__goods-name {
     display: flex;
     flex-direction: column;
+    padding-right: 5%;
+}
+
+.modal__slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  @include tablets {
+    display: none;
+  }
 }
 
 .modal__slider-img {
@@ -27,9 +42,46 @@
     height: rem(80px);
 }
 
+.modal__arrow {
+  position: absolute;
+  cursor: pointer;
+  font-size: rem(50px);
+  
+  &--left {
+    right: 92%;
+  }
+
+  &--right {
+    left: 92%;
+  }
+}
+
+.modal__wrapper {
+  position: relative;
+  display: flex;
+  width: rem(470px);
+  overflow: hidden;
+}
+
+.modal__items {
+  display: flex;
+  position: relative;
+  right: 0;
+  transition: right .3s;
+}
+
 .modal__img {
     width: rem(250px);
     height: rem(180px);
+    margin-bottom: 2%;
+
+    @include tablets {
+      display: none;
+    }
+}
+
+.modal__slider-img {
+  margin-right: 2%;
 }
 
 .form {
