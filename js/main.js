@@ -2,10 +2,6 @@ $(".goods__avatar").brazzersCarousel(e => {
     
 });
 
-$(".goods__link").click(e => {
-    event.preventDefault();
-});
-
 // Показ инфы при ховер
 
 const openItem = item => {
@@ -40,6 +36,28 @@ $('.goods__link').hover(e => {
     }
 });
 
-//возврат к первому слайду
+// модальное окно
+
+$(".goods__link").click(e => {
+    event.preventDefault();
+
+/*     $.fancybox.open({
+        src: "#modal",
+        type: "inline"
+    }) */
+});
+
+$("[data-goods-id]").click(e => {
+    e.preventDefault();
+
+    const $this = $(e.currentTarget);
+    const target = $this.attr("data-goods-id");
+    const reqSection = $(`[data-open-id=${target}]`);
+
+    $.fancybox.open({
+        src: "#modal",
+        type: "inline"
+    })
+});
 
 

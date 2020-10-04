@@ -16,7 +16,7 @@
         <div class="goods">
             <div class="goods__preview">Товары</div>
             <ul class="goods__list">
-                <li class="goods__item">
+                <li data-goods-id="Fashion" class="goods__item">
                     <a href="" class="goods__link">
                         <div class="goods__avatar">
                             <img src="./img/hiphop1.jpg" alt="boots" class="goods__img">
@@ -36,7 +36,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="goods__item">
+                <li data-goods-id="Girl" class="goods__item">
                     <a href="" class="goods__link">
                         <div class="goods__avatar">
                             <img src="./img/girl1.jpg" alt="boots" class="goods__img">
@@ -55,7 +55,7 @@
                         </div>
                     </a>
                 </li>
-                <li class="goods__item">
+                <li data-goods-id="Man" class="goods__item">
                     <a href="" class="goods__link">
                         <div class="goods__avatar">
                             <img src="./img/man1.jpg" alt="boots" class="goods__img">
@@ -136,7 +136,79 @@
             </ul>
         </div>
     </div>
-
+    <div data-open-id="Fashion" class="modal__window" id="modal">
+        <div class="modal__container">
+            <div class="modal__main-info">
+                <div class="modal__goods-name">
+                    <h2 class="modal__title">Shoes</h2>
+                    <img src="./img/hiphop1.jpg" alt="" class="modal__img">
+                </div>
+                <div class="modal__delivery delivery">
+                    <form class="delivery_form form">
+                        <input type="hidden" name="to" value="kudato@mail.com">
+                        <div class="form__column">
+                          <div class="form__row">
+                            <label class="form__block">
+                              <div class="form__title">Имя</div>
+                              <input type="text" name="name" required class="form__input">
+                            </label>
+                            <label class="form__block">
+                              <div class="form__title">Телефон</div>
+                              <input type="tel" name="phone" required class="form__input">
+                            </label>
+                          </div>
+                          <div class="form__row">
+                            <label class="form__block">
+                              <div class="form__title">Улица</div>
+                              <input type="text" class="form__input" required>
+                            </label>
+                          </div>
+                        </div>
+                        <div class="form__column">
+                          <div class="form__row">
+                            <label class="form__block">
+                              <div class="form__title">Коментарий</div>
+                              <textarea class="form__input form__input--textarea" name="comment"></textarea>
+                            </label>
+                          </div>
+                          <div class="form__controls">
+                            <label class="form__radio radio">
+                              <input type="radio" checked name="option" class="radio__elem">
+                              <div class="radio__visible"></div>
+                              <div class="radio__title">Потребуется сдача</div>
+                            </label>
+                            <label class="form__radio radio">
+                              <input type="radio" name="option" class="radio__elem">
+                              <div class="radio__visible"></div>
+                              <div class="radio__title">Оплата по карте</div>
+                            </label>
+                          </div>
+                          <div class="form__controls">
+                            <label class="form__checkbox radio radio--checkbox">
+                              <input type="checkbox" class="radio__elem">
+                              <div class="radio__visible"></div>
+                              <div class="radio__title">Не перезванивать</div>
+                            </label>
+                          </div>
+                          <div class="form__btns">
+                            <input type="submit" value="Заказать" class="btn btn--theme--green">
+                            <input type="reset" value="Очистить" class="btn btn--theme--transparent">
+                          </div>
+                        </div>
+                      </form>
+                      <div class="goods__content-block">
+                        <button class="goods__like">В корзину</button>
+                        <div class="goods__size">Размеры</div>
+                        <div class="goods__info">Осень 2020</div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal__slider">
+                <img src="./img/hiphop1.jpg" alt="" class="modal__slider-img">
+                <img src="./img/hiphop2.jpg" alt="" class="modal__slider-img">
+            </div>
+        </div>
+    </div>
 </body>
 <script src="./js/jQuery.js"></script>
 <script src="./js/fancybox-master/dist/jquery.fancybox.min.js"></script>

@@ -1,0 +1,124 @@
+.modal__window {
+    display: none;
+}
+
+.modal__container {
+    padding: 2%;
+    position: relative;
+    width: 95%;
+    max-width: $containerWidth;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(225, 232, 232, .3);
+}
+
+.modal__main-info {
+    display: flex;
+}
+
+.modal__goods-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal__slider-img {
+    width: rem(150px);
+    height: rem(80px);
+}
+
+.modal__img {
+    width: rem(250px);
+    height: rem(180px);
+}
+
+.form {
+    padding: 2% 2%;
+    display: flex;
+    flex-direction: column;
+  
+    @include tablets {
+      flex-direction: column;
+      padding: 0 18%;
+    }
+  
+    @include phones {
+      padding: 0;
+    }
+  }
+  
+  .form__column {
+  
+    &:last-child {
+      margin-right: 0;
+    }
+  
+    @include tablets {
+      margin-right: 0;
+      padding: 0 2%;
+    }
+  }
+  
+  .form__row {
+    display: flex;
+    margin-bottom: rem(18px);
+  
+    @include tablets {
+      margin-bottom: 0;
+    }
+  }
+  
+  .form__block {
+    margin-right: rem(20px);
+  
+  
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  
+  .form__input {
+    width: 100%;
+    border: none;
+    padding: rem(5px) rem(6px);
+    border: solid rem(3px) transparent;
+  
+    @include tablets {
+      height: 50%;
+    }
+  
+  
+    &--textarea {
+      height: rem(80px);
+      resize: none;
+  
+      @include tablets {
+        height: 75%;
+      }
+    }
+  
+    &:focus {
+      border-color: #dee2bd;
+      outline: none;
+    }
+  }
+  
+  .form__controls {
+    display: flex;
+    flex-wrap: wrap;
+  
+    @include phones {
+      justify-content: center;
+    }
+  }
+  
+  .form__btns {
+    @include tablets {
+      display: flex;
+      justify-content: center;
+    }
+  
+    @include tablets {
+      padding-left: 5%;
+    }
+  }
