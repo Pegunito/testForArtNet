@@ -116,7 +116,7 @@ img {
 }
 
 .modal__window {
-  display: none;
+  /* display: none; */
   border-radius: 20px;
   z-index: 1000;
 }

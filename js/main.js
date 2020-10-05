@@ -70,7 +70,7 @@ const items = document.querySelectorAll(".modal__slider-img");
 
 const minRight = 0;
 const step = 160;
-const preShownItems = 470 / step;
+const preShownItems = 500 / step;
 const maxRight = (items.length - preShownItems) * step;
 let currentRight = 0;
 
