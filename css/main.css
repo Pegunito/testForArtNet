@@ -116,10 +116,14 @@ img {
 }
 
 .modal__window {
-  background: #61c4d9;
   display: none;
   border-radius: 20px;
   z-index: 1000;
+}
+@media screen and (max-width: 768px) {
+  .modal__window {
+    overflow-y: scroll;
+  }
 }
 
 .modal__container {
@@ -134,6 +138,12 @@ img {
 
 .modal__main-info {
   display: flex;
+}
+@media screen and (max-width: 768px) {
+  .modal__main-info {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .modal__goods-name {
@@ -186,9 +196,13 @@ img {
 }
 
 .modal__img {
+  border-radius: 0.2777777778rem;
   width: 13.8888888889rem;
   height: 10rem;
   margin-bottom: 2%;
+}
+.modal__img:hover {
+  border: 3px solid rgba(167, 80, 199, 0.3);
 }
 @media screen and (max-width: 768px) {
   .modal__img {
@@ -199,8 +213,21 @@ img {
 .modal__slider-img {
   margin-right: 2%;
 }
+.modal__slider-img:hover {
+  border: 3px solid rgba(167, 80, 199, 0.3);
+}
+
+@media screen and (max-width: 768px) {
+  .modal__content-block {
+    display: flex;
+    margin-bottom: 3%;
+  }
+}
 
 .form {
+  margin-bottom: 2%;
+  background: rgba(167, 80, 199, 0.3);
+  border-radius: 0.2777777778rem;
   padding: 2% 2%;
   display: flex;
   flex-direction: column;
@@ -269,6 +296,12 @@ img {
   outline: none;
 }
 
+.form__controls-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 4%;
+}
+
 .form__controls {
   display: flex;
   flex-wrap: wrap;
@@ -289,4 +322,17 @@ img {
   .form__btns {
     padding-left: 5%;
   }
+}
+
+.form__radio {
+  margin-right: 15%;
+}
+.form__radio:last-child {
+  margin-right: 0;
+}
+
+.btn {
+  color: #fff;
+  border-radius: 0.5555555556rem;
+  background-color: #db2912;
 }

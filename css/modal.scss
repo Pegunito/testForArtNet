@@ -1,8 +1,11 @@
 .modal__window {
-    background: #61c4d9;
     display: none;
     border-radius: 20px;
     z-index: 1000;
+
+    @include tablets {
+      overflow-y: scroll;
+    }
 }
 
 .modal__container {
@@ -18,6 +21,11 @@
 
 .modal__main-info {
     display: flex;
+
+    @include tablets {
+      flex-direction: column;
+      align-items: center;
+    }
 }
 
 .modal__goods-name {
@@ -71,9 +79,14 @@
 }
 
 .modal__img {
+    border-radius: rem(5px);
     width: rem(250px);
     height: rem(180px);
     margin-bottom: 2%;
+
+    &:hover {
+      border: 3px solid rgba(167, 80, 199, .3);
+  }
 
     @include tablets {
       display: none;
@@ -82,9 +95,24 @@
 
 .modal__slider-img {
   margin-right: 2%;
+
+  &:hover {
+    border: 3px solid rgba(167, 80, 199, .3);
+  }
+}
+
+.modal__content-block {
+
+  @include tablets {
+    display: flex;
+    margin-bottom: 3%;
+  }
 }
 
 .form {
+    margin-bottom: 2%;
+    background: rgba(167, 80, 199, .3);
+    border-radius: rem(5px);
     padding: 2% 2%;
     display: flex;
     flex-direction: column;
@@ -155,6 +183,12 @@
     }
   }
   
+.form__controls-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 4%;
+}
+
   .form__controls {
     display: flex;
     flex-wrap: wrap;
@@ -173,4 +207,18 @@
     @include tablets {
       padding-left: 5%;
     }
+  }
+
+  .form__radio {
+    margin-right: 15%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .btn {
+    color: #fff;
+    border-radius: rem(10px);
+    background-color: rgb(219, 41, 18);
   }
